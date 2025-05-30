@@ -62,7 +62,7 @@ section {
     left: 0;
     width: 100vw;
     min-height: 100dvh;
-     background: black;
+    background: black;
     z-index: -1;
 }
 
@@ -93,7 +93,21 @@ section {
     overflow: hidden;
     border-right: 2px solid white;
     font-size: clamp(3rem, 5vw, 5rem);
-    animation: blink 0.75s step-end infinite;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0% {
+        border-right: solid;
+    }
+
+    50% {
+        border-right: none;
+    }
+
+    100% {
+        border-right: solid;
+    }
 }
 
 .hakkimda-big-container {
@@ -157,6 +171,31 @@ section {
 .software-languages .head {
     font-size: 5rem;
     margin-bottom: 5rem;
+}
+
+.projects-container {
+    color: var(--WhiteColor);
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-container a {
+    color: var(--GrayColor);
+    text-decoration: none;
+}
+
+.projects-container .head {
+    font-size: 5rem;
+    margin-bottom: 5rem;
+}
+.projects-container .project-list{
+    font-size: 2.2rem;
+}
+.projects-container .text{
+    font-size: 2.2rem;
 }
 
 @media (max-width:600px) {
